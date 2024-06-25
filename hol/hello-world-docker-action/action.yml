@@ -1,0 +1,14 @@
+name: 'Container Welcome'
+input:
+  welcome-intro:
+    description: 'Hello'
+    default: 'Everyone'
+output:
+  day:
+    description: 'Today'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+  - ${{ inputs.welcome-intro }}
