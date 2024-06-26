@@ -12,3 +12,10 @@ runs:
   image: 'Dockerfile'
   args:
   - ${{ inputs.welcome-intro }}
+
+workflow_dispatch:
+  inputs:
+    environment:
+      description: 'Environment to deploy to'
+      type: environment
+      required: true
